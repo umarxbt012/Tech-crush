@@ -17,7 +17,7 @@ fruits.forEach(function(fruit){
 //map methods
 let scores = [90 , 80 , 70 , 60 , 50]
 let newScores = scores.map( x => {
-    // console.log("as a good teacher , i decided to add 5 marks to all my students")
+    //console.log("as a good teacher , i decided to add 5 marks to all my students")
      return x + 5
 }) //arrow function
 console.log(newScores)
@@ -27,6 +27,27 @@ let nameTag = students.map(function(name){
 })
 console.log(nameTag)
 //filter method
+let jambScores = [200, 250, 300, 150, 180, 280, 290, 100];
+
+let passed = jambScores.filter((score) => {
+  return score >= 200;
+});
+console.log(passed);
+
+let ages = [18, 25, 30, 15, 20, 35, 40];
+
+let adults = ages.filter(function (age) {
+  return age >= 18;
+});
+console.log(adults);
+
+//find
+const studentsNames = ["john", "john", "Ada", "doe", "jane", "smith", "Bola"];
+const found = studentsNames.find((name) => {
+  return name === "John".toLowerCase(); //case sensitive
+});
+console.log(found);
+
 //reduce
 let cartPrices = [1500, 800, 2200, 450, 1000];
 let total = cartPrices.reduce(function (accumulator, currentPrice) {
